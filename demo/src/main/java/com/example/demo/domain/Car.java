@@ -20,14 +20,13 @@ public class Car {
     public Car() {
     }
 
-    public Car(@NonNull String brand, @NonNull String model, @NonNull String color, @NonNull String registrationNumber, int modelYear, int price, Owner owner) {
+    public Car(@NonNull String brand, @NonNull String model, @NonNull String color, @NonNull String registrationNumber, int modelYear, int price) {
         this.brand = brand;
         this.model = model;
         this.color = color;
         this.registrationNumber = registrationNumber;
         this.modelYear = modelYear;
         this.price = price;
-        this.owner = owner;
     }
 
     public long getId() {

@@ -37,8 +37,8 @@ public class TestdbApplication implements CommandLineRunner {
         Owner owner1 = new Owner("Homer", "Simpson");
         Owner owner2 = new Owner("Marge", "Simpson");
         ownerRepository.saveAll(Arrays.asList(owner1, owner2));
-        carRepository.save(new Car("A","스타렉스","검정","12가3456",2020,20000000,owner1));
-        carRepository.save(new Car("B","그랜저","하양","34나5678",2023,50000000,owner2));
-        carRepository.save(new Car("C","람보르기니","노랑","56다7890",2025,250000000,owner2));
+        carRepository.save(new Car("A","스타렉스","검정","12가3456",2020,20000000));
+        carRepository.save(new Car("B","그랜저","하양","34나5678",2023,50000000));
+        carRepository.save(new Car("C","람보르기니","노랑","56다7890",2025,250000000));
     }
 }
