@@ -33,7 +33,7 @@ public class Cardatabase3Application implements CommandLineRunner {
         carRepository.save(new Car("현대", "소나타", "검정", "123가4567", 2026, 30000000, owner1));
         carRepository.save(new Car("기아", "K9", "흰색", "987나5432", 2025, 20000000, owner2));
         carRepository.save(new Car("람보르기니", "쿤타치", "빨강", "159다7532", 2010, 130000000, owner2));
-        appUserRepository.save(new AppUser("user","$2a$12$SB4054LDdorsxgemwOZtgujj.OTq0e4IefjXQIDoRw3SfWoTw6Rh.","user"));
-        appUserRepository.save(new AppUser("admin","$2a$12$SB4054LDdorsxgemwOZtgujj.OTq0e4IefjXQIDoRw3SfWoTw6Rh.","admin"));
+        appUserRepository.save(new AppUser("user", "$2a$12$y2Uh2YuP.oabba6cLTTWteLDnSQ3ke9rFQn3kFvqrJay/IpBeOrEC", "User"));
+        appUserRepository.save(new AppUser("admin", "$2a$12$To9/Z9IJTWrwlD8Xs1.v8e5Ps4AZR9VSaac7fMP7.gHc98dvUmV6.", "ADMIN"));
     }
 }
