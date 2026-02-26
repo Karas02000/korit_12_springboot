@@ -1,26 +1,31 @@
-package com.todolist.demo.entity;
+package com.todo.todolist.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Data;
 
 import java.util.List;
 
 @Entity
+@Table(name= "users")
 @Data
-@NoArgsConstructor
-@Getter
 public class User {
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
-    @Setter @Column(nullable = false, unique = true)
+    @Column(nullable = false, unique = true)
     private String username;
-    @Setter @Column(nullable = false)
+
+    @Column(nullable = false)
     private String password;
-    @Setter @Column(nullable = false)
+
+    @Column(nullable = false)
     private String role;
-    @Setter @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Todo> todos;
+
+    public User() {}
 
     public User(String username, String password, String role) {
         this.username = username;
